@@ -1,0 +1,20 @@
+# host
+[localhost]
+local ansible_host=127.0.0.1 ansible_connection=local ansible_ssh_user=thor ansible_ssh_pass=mjolnir123
+
+[appserver]
+stapp01 ansible_ssh_host=172.16.238.10 ansible_connection=ssh ansible_ssh_user=tony ansible_ssh_pass=Ir0nM@n ansible_become_pass=Ir0nM@n
+stapp02 ansible_ssh_host=172.16.238.11 ansible_connection=ssh ansible_ssh_user=steve ansible_ssh_pass=Am3ric@ ansible_become_pass=Am3ric@
+stapp03 ansible_ssh_host=172.16.238.12 ansible_connection=ssh ansible_ssh_user=banner ansible_ssh_pass=BigGr33n ansible_become_pass=BigGr33n
+
+[dbserver]
+stdb01 ansible_ssh_host=172.16.239.10 ansible_connection=ssh ansible_ssh_user=peter ansible_ssh_pass=Sp!dy ansible_become_pass=Sp!dy
+
+[dcstorage]
+ststor01 ansible_ssh_host=172.16.238.15 ansible_connection=ssh ansible_ssh_user=natasha ansible_ssh_pass=Bl@kW ansible_become_pass=Bl@kW
+
+[backupserver]
+stbkp01 ansible_ssh_host=172.16.238.16 ansible_connection=ssh ansible_ssh_user=clint ansible_ssh_pass=H@wk3y3 ansible_become_pass=H@wk3y3
+
+[mailserver]
+stmail01 ansible_ssh_host=172.16.238.17 ansible_connection=ssh ansible_ssh_user=groot ansible_ssh_pass=Gr00T123 ansible_become_pass=Gr00T123
