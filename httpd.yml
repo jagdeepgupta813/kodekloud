@@ -1,0 +1,17 @@
+---
+- hosts: appserver
+  become: true
+  vars:
+    ansible_host_key_checking: false
+  tasks:
+    - name: install httpd service
+      yum:
+        name: httpd
+        state: present
+    - name: start the service and enable it
+      systemd:
+        name: httpd
+        state: started        
+        enabled: yes
+      
+    
