@@ -1,0 +1,10 @@
+---
+- hosts: appservers
+  become: true 
+  tasks:
+          - name: copy to remote linux host
+            copy:
+                    src: /tmp/nautilus.txt.gpg
+                    dest: /home/data
+
+
