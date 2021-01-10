@@ -14,10 +14,10 @@
                             - setools-console 
                             - mcstrans
                     state: present
-           - name: disable selinux
-             lineinfile:
-                     path: /etc/selinux/config
-                     line: SELINUX=disabled
+          - name: disable selinux
+            lineinfile:
+                    path: /etc/selinux/config
+                    line: SELINUX=disabled
                          
                          
            
