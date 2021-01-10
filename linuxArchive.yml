@@ -3,6 +3,7 @@
   become: true
   tasks:
           - name: archive the directory and move to home 
-            path: /data/javed
-            dest: /home/javed.tar.gz
+            archive:
+                    path: /data/siva
+                    dest: /home/siva.tar.gz
 
