@@ -1,0 +1,25 @@
+- name: install selinux on app servers
+  become: true
+  tasks:
+          - name: Install selinux packages and policies
+            yum:
+                    name:
+                            - policycoreutils
+                            - ploicycoreutils-python
+                            - selinux-policy
+                            - selinux-policy-targeted
+                            - libselinux-utils
+                            - setroubleshoot-server 
+                            - setools 
+                            - setools-console 
+                            - mcstrans
+                    state: present
+           - name: disable selinux
+             lineinfile:
+                     path: /etc/selinux/config
+                     line: SELINUX=disabled
+                         
+                         
+           
+                        
+          
