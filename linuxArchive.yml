@@ -1,0 +1,8 @@
+---
+- hosts: stapp01
+  become: true
+  tasks:
+          - name: archive the directory and move to home 
+            path: /data/javed
+            dest: /home/javed.tar.gz
+
