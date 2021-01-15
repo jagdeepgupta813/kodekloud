@@ -1,0 +1,9 @@
+---
+- name: create user and set home 
+  hosts: stapp03
+  tasks:
+          - name: create user and set home directory
+            user:
+                    name: john
+                    home: /var/www
+                    uid: 1234
