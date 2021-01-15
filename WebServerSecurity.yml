@@ -1,0 +1,19 @@
+---
+- name: secure apache web server version and secure other information 
+  become: true
+  tasks:
+          - name: change servertoken mode to production
+            lineinfile: dest=/etc/httpd/conf/httpd.conf regexp: '^ServerTokens' line: ServerTokens Prod
+            state: present
+          - name: turn server signature off
+            lineinfile: dest=/etc/httpd/conf/httpd/conf regexp: 'ServerSignature' line: ServerSignature off
+            state: present
+            notify:
+                    -  restart httpd
+
+
+  handlers:
+          - name: restart httpd
+            service: name=httpd state=restarted
+
+          
